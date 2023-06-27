@@ -24,7 +24,7 @@ task:
   timeout_in: 240m
   trigger_type: manual
   container:
-      image: ghcr.io/sanju0910/ubuntu:latest
+      image: ghcr.io/satorugojo2k23/ubuntu:latest
       cpu: 8
       memory: 32G
       
