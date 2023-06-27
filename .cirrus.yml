@@ -10,11 +10,11 @@ env:
     ROM_REPO: "https://github.com/LineageOS/android"
     ROM_BRANCH: lineage-18.1 --git-lfs
     DEVICE_REPO: "https://github.com/Realme-G70-Series/device_realme_RMX2020"
-    DEVICE_BRANCH: lineage-18.1
+    DEVICE_BRANCH: lineage-18.1-rmui1
     VENDOR_REPO: "https://github.com/Realme-G70-Series/vendor_realme_RMX2020"
     VENDOR_BRANCH: 11-rmui1
     KERNEL_REPO: "https://github.com/Realme-G70-Series/kernel_realme_RMX2020"
-    KERNEL_BRANCH: Arrow-11.0
+    KERNEL_BRANCH: arrow-11.0
     USERNAME: satorugojo2k23
     USERMAIL: satorugojo4200@gmail.com
     OUTPUT: lineage_*.zip
