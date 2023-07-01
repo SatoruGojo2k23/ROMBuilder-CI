@@ -24,7 +24,7 @@ task:
   timeout_in: 240m
   trigger_type: manual
   container:
-      image: ghcr.io/satorugojo2k23/ubuntu:latest
+      image: jenkins/jenkins:lts-jdk11
       cpu: 8
       memory: 32G
       
@@ -39,10 +39,10 @@ task:
   #  fi    
 
   SYNC_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/main/scripts/sync_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/sync_rom.sh | bash
       
   BUILD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/main/scripts/build_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/build_rom.sh | bash
       
   UPLOAD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/main/scripts/upload_rom.sh | bash
+      - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/upload_rom.sh | bash
