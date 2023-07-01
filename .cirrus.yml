@@ -24,28 +24,11 @@ task:
   timeout_in: 240m
   trigger_type: manual
   container:
-      image: jenkins/jenkins:lts-jdk11
+      image: ghcr.io/satorugojo2k23/ubuntu:latest
       cpu: 8
       memory: 32G
 
-  Build-script:
-       - export DEBIAN_FRONTEND=noninteractive
-       - apt update
-       - apt install sudo
-       - DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
-       - ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-       - apt-get install -y tzdata
-       - dpkg-reconfigure --frontend noninteractive tzdata
-       - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip git-lfs unzip lzma cpio ccache clang -y
-       - sudo apt install python3 -y
-       - sudo ln -sf /usr/bin/python3 /usr/bin/python
-       - git config --global user.name "SatoruGojo2k23"
-       - git config --global user.email "satorugojo4200@gmail.com"
-       - git clone https://github.com/akhilnarang/scripts.git ~/scripts
-       - cd ~/scripts
-       - sudo bash setup/android_build_env.sh
-       - cd ~
- # CLONE_SCRIPT_script: |
+# CLONE_SCRIPT_script: |
  #   if [ -z "$CIRRUS_PR" ]; then
  #     git clone --recursive --branch=$CIRRUS_BRANCH https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
   #    git reset --hard $CIRRUS_CHANGE_IN_REPO
