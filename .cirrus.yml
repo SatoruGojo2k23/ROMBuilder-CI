@@ -22,8 +22,9 @@ env:
     
 task:
   name: "ROM Build"
-  timeout_in: 240m
+  timeout_in: 180m
   trigger_type: manual
+  use_compute_credits: true
   container:
       image: ghcr.io/satorugojo2k23/ubuntu:latest
       cpu: 44
