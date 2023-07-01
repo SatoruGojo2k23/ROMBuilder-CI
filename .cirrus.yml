@@ -47,3 +47,4 @@ task:
       
   UPLOAD_SCRIPT_script:
       - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/upload_rom.sh | bash
+
