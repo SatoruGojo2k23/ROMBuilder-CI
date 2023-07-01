@@ -38,7 +38,7 @@ task:
    #   git reset --hard $CIRRUS_CHANGE_IN_REPO
   #  fi    
   
-Build-Env-Setup_script:
+   Build-Env-script:
        - export DEBIAN_FRONTEND=noninteractive
        - apt update
        - apt install sudo
@@ -55,7 +55,6 @@ Build-Env-Setup_script:
        - cd ~/scripts
        - sudo bash setup/android_build_env.sh
        - cd ~
-
   SYNC_SCRIPT_script:
       - curl -sL https://raw.githubusercontent.com/SatoruGojo2k23/ROMBuilder-CI/crdroid-13.0/scripts/sync_rom.sh | bash
       
