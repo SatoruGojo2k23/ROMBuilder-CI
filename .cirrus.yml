@@ -3,11 +3,10 @@ env:
     CODENAME: RMX2020
     CIRRUS_CI: true
     CIRRUS_SHELL: bash
-    CIRRUS_USER_COLLABORATOR: true
     TARGET: m bacon -j16
     ROM_NAME: lineage
     PRODUCT_NAME: lineage_RMX2020
-    VARIANT: userdebug
+    VARIANT: user
     ROM_REPO: "https://github.com/crdroidandroid/android.git"
     ROM_BRANCH: 13.0 --git-lfs
     DEVICE_REPO: "https://github.com/SatoruGojo2k23/device_realme_RMX2020"
@@ -23,11 +22,10 @@ env:
 task:
   name: "ROM Build"
   timeout_in: 180m
-  use_compute_credits: true
   container:
       image: ghcr.io/satorugojo2k23/ubuntu:latest
-      cpu: 16
-      memory: 64G
+      cpu: 8
+      memory: 32G
 
 # CLONE_SCRIPT_script: |
  #   if [ -z "$CIRRUS_PR" ]; then
