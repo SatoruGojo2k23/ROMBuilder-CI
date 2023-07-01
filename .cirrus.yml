@@ -3,21 +3,21 @@ env:
     CODENAME: RMX2020
     CIRRUS_CI: true
     CIRRUS_SHELL: bash
-    TARGET: make bacon -j16
+    TARGET: m bacon -j16
     ROM_NAME: lineage
     PRODUCT_NAME: lineage_RMX2020
     VARIANT: userdebug
-    ROM_REPO: "https://github.com/LineageOS/android"
-    ROM_BRANCH: lineage-18.1 --git-lfs
-    DEVICE_REPO: "https://github.com/Realme-G70-Series/device_realme_RMX2020"
-    DEVICE_BRANCH: lineage-18.1-rmui1
-    VENDOR_REPO: "https://github.com/Realme-G70-Series/vendor_realme_RMX2020"
-    VENDOR_BRANCH: 11-rmui1
-    KERNEL_REPO: "https://github.com/Realme-G70-Series/kernel_realme_RMX2020"
-    KERNEL_BRANCH: arrow-11.0
+    ROM_REPO: "https://github.com/crdroidandroid/android.git"
+    ROM_BRANCH: 13.0 --git-lfs
+    DEVICE_REPO: "https://github.com/SatoruGojo2k23/device_realme_RMX2020"
+    DEVICE_BRANCH: crdroid-13.0
+    VENDOR_REPO: "https://github.com/ArrowOS-Devices/android_vendor_realme_RMX2020"
+    VENDOR_BRANCH: arrow-13.0
+    KERNEL_REPO: "https://github.com/ArrowOS-Devices/android_kernel_realme_RMX2020"
+    KERNEL_BRANCH: arrow-13.0
     USERNAME: satorugojo2k23
     USERMAIL: satorugojo4200@gmail.com
-    OUTPUT: lineage_*.zip
+    OUTPUT: crDroid*.zip
     
 task:
   name: "ROM Build"
