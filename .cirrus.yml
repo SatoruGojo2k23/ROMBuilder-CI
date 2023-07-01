@@ -3,6 +3,7 @@ env:
     CODENAME: RMX2020
     CIRRUS_CI: true
     CIRRUS_SHELL: bash
+    CIRRUS_USER_COLLABORATOR: true
     TARGET: m bacon -j16
     ROM_NAME: lineage
     PRODUCT_NAME: lineage_RMX2020
@@ -23,11 +24,10 @@ task:
   name: "ROM Build"
   timeout_in: 240m
   trigger_type: manual
-  use_compute_credits: $CIRRUS_USER_COLLABORATOR == 'true'
   container:
       image: ghcr.io/satorugojo2k23/ubuntu:latest
-      cpu: 12
-      memory: 32G
+      cpu: 44
+      memory: 120G
 
 # CLONE_SCRIPT_script: |
  #   if [ -z "$CIRRUS_PR" ]; then
