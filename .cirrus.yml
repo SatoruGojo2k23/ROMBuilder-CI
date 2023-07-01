@@ -20,6 +20,7 @@ env:
     OUTPUT: crDroid*.zip
     
 task:
+  use_compute_credits: $CIRRUS_USER_COLLABORATOR == 'true'
   name: "ROM Build"
   timeout_in: 240m
   trigger_type: manual
