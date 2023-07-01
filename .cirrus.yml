@@ -20,13 +20,13 @@ env:
     OUTPUT: crDroid*.zip
     
 task:
-  use_compute_credits: $CIRRUS_USER_COLLABORATOR == 'true'
   name: "ROM Build"
   timeout_in: 240m
   trigger_type: manual
+  use_compute_credits: $CIRRUS_USER_COLLABORATOR == 'true'
   container:
       image: ghcr.io/satorugojo2k23/ubuntu:latest
-      cpu: 8
+      cpu: 12
       memory: 32G
 
 # CLONE_SCRIPT_script: |
