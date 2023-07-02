@@ -21,7 +21,6 @@ env:
     
 task:
   name: "ROM Build"
-  timeout_in: 180m
   container:
       image: ghcr.io/satorugojo2k23/ubuntu:latest
       cpu: 8
